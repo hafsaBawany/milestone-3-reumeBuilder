@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="form-container">
+            <h2>Enter Your Information</h2>
+            <form id="resume-form" enctype="multipart/form-data">
+                <div class="input-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                <div class="input-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" placeholder="30" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="education">Education:</label>
+                    <input type="text" id="education" name="education" placeholder="Bachelor's Degree in Computer Science" required>
+                </div>
+                <div class="input-group">
+                    <label for="skills">Skills:</label>
+                    <textarea id="skills" name="skills" placeholder="JavaScript, React, CSS" required></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="certifications">Certifications:</label>
+                    <input type="text" id="certifications" name="certifications" placeholder="Certified Front-End Developer" required>
+                </div>
+                <div class="input-group">
+                    <label for="languages">Languages:</label>
+                    <input type="text" id="languages" name="languages" placeholder="English, Spanish" required>
+                </div>
+                <div class="input-group">
+                    <label for="interests">Interests:</label>
+                    <textarea id="interests" name="interests" placeholder="Traveling, Programming" required></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="profile-pic">Profile Picture:</label>
+                    <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+                </div>
+
+                <button type="submit" class="btn">Generate Resume</button>
+            </form>
+        </div>
+
+        <!-- Resume Output Section -->
+        <div class="resume-container" style="display:none;">
+            <div id="resume">
+                <div class="resume-header">
+                    <img id="resume-profile-pic" src="" alt="Profile Picture" class="profile-pic">
+                    <h1 id="resume-name"></h1>
+                    
+                </div>
+                <div class="resume-section">
+                    <h2>E-mail ID</h2>
+                    <p id="resume-email"></p>
+                </div>
+                <div class="resume-section">
+                    <h2>Age</h2>
+                    <p id="resume-age"></p>
+                </div>
+
+                <div class="resume-section">
+                    <h2>Education</h2>
+                    <p id="resume-education"></p>
+                </div>
+
+                <div class="resume-section">
+                    <h2>Skills</h2>
+                    <p id="resume-skills"></p>
+                </div>
+
+                <div class="resume-section">
+                    <h2>Certifications</h2>
+                    <p id="resume-certifications"></p>
+                </div>
+
+                <div class="resume-section">
+                    <h2>Languages</h2>
+                    <p id="resume-languages"></p>
+                </div>
+
+                <div class="resume-section">
+                    <h2>Interests</h2>
+                    <p id="resume-interests"></p>
+                </div>
+            </div>
+
+            <button id="reset-form" class="btn">Reset Form</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+
+
+
